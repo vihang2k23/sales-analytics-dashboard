@@ -1,0 +1,49 @@
+[
+  { "month": "Jan", "category": "Electronics", "revenue": 48200, "unitsSold": 312, "returns": 18 },
+  { "month": "Jan", "category": "Clothing", "revenue": 22100, "unitsSold": 540, "returns": 41 },
+  { "month": "Jan", "category": "Furniture", "revenue": 31500, "unitsSold": 86, "returns": 5 },
+
+  { "month": "Feb", "category": "Electronics", "revenue": 45100, "unitsSold": 289, "returns": 16 },
+  { "month": "Feb", "category": "Clothing", "revenue": 19800, "unitsSold": 480, "returns": 37 },
+  { "month": "Feb", "category": "Furniture", "revenue": 28900, "unitsSold": 74, "returns": 4 },
+
+  { "month": "Mar", "category": "Electronics", "revenue": 52300, "unitsSold": 341, "returns": 21 },
+  { "month": "Mar", "category": "Clothing", "revenue": 24600, "unitsSold": 610, "returns": 45 },
+  { "month": "Mar", "category": "Furniture", "revenue": 34200, "unitsSold": 95, "returns": 6 },
+
+  { "month": "Apr", "category": "Electronics", "revenue": 49800, "unitsSold": 325, "returns": 19 },
+  { "month": "Apr", "category": "Clothing", "revenue": 27400, "unitsSold": 680, "returns": 52 },
+  { "month": "Apr", "category": "Furniture", "revenue": 36800, "unitsSold": 102, "returns": 7 },
+
+  { "month": "May", "category": "Electronics", "revenue": 51200, "unitsSold": 334, "returns": 20 },
+  { "month": "May", "category": "Clothing", "revenue": 29100, "unitsSold": 720, "returns": 48 },
+  { "month": "May", "category": "Furniture", "revenue": 39100, "unitsSold": 110, "returns": 8 },
+
+  { "month": "Jun", "category": "Electronics", "revenue": 54700, "unitsSold": 358, "returns": 22 },
+  { "month": "Jun", "category": "Clothing", "revenue": 31200, "unitsSold": 765, "returns": 55 },
+  { "month": "Jun", "category": "Furniture", "revenue": 40500, "unitsSold": 118, "returns": 9 },
+
+  { "month": "Jul", "category": "Electronics", "revenue": 56100, "unitsSold": 372, "returns": 24 },
+  { "month": "Jul", "category": "Clothing", "revenue": 33800, "unitsSold": 810, "returns": 61 },
+  { "month": "Jul", "category": "Furniture", "revenue": 38200, "unitsSold": 108, "returns": 7 },
+
+  { "month": "Aug", "category": "Electronics", "revenue": 53400, "unitsSold": 349, "returns": 23 },
+  { "month": "Aug", "category": "Clothing", "revenue": 32100, "unitsSold": 790, "returns": 58 },
+  { "month": "Aug", "category": "Furniture", "revenue": 37600, "unitsSold": 105, "returns": 8 },
+
+  { "month": "Sep", "category": "Electronics", "revenue": 58900, "unitsSold": 385, "returns": 25 },
+  { "month": "Sep", "category": "Clothing", "revenue": 28400, "unitsSold": 695, "returns": 50 },
+  { "month": "Sep", "category": "Furniture", "revenue": 42100, "unitsSold": 124, "returns": 10 },
+
+  { "month": "Oct", "category": "Electronics", "revenue": 61200, "unitsSold": 402, "returns": 28 },
+  { "month": "Oct", "category": "Clothing", "revenue": 26800, "unitsSold": 650, "returns": 47 },
+  { "month": "Oct", "category": "Furniture", "revenue": 44800, "unitsSold": 132, "returns": 11 },
+
+  { "month": "Nov", "category": "Electronics", "revenue": 78400, "unitsSold": 510, "returns": 36 },
+  { "month": "Nov", "category": "Clothing", "revenue": 35600, "unitsSold": 870, "returns": 64 },
+  { "month": "Nov", "category": "Furniture", "revenue": 51200, "unitsSold": 148, "returns": 12 },
+
+  { "month": "Dec", "category": "Electronics", "revenue": 92100, "unitsSold": 598, "returns": 42 },
+  { "month": "Dec", "category": "Clothing", "revenue": 41200, "unitsSold": 980, "returns": 71 },
+  { "month": "Dec", "category": "Furniture", "revenue": 48600, "unitsSold": 141, "returns": 13 }
+]

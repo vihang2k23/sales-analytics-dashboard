@@ -1,28 +1,11 @@
 <script setup lang="ts">
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-} from 'chart.js'
 import { Line } from 'vue-chartjs'
 import type { ChartOptions } from 'chart.js'
 import { useChartData } from '../composables/useChartData'
+import { registerCharts } from '../utils/registerCharts'
 import ChartPanel from './ChartPanel.vue'
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-)
+registerCharts()
 
 const { lineChartData } = useChartData()
 

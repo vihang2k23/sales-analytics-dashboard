@@ -2,7 +2,11 @@ import { computed } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useSalesStore } from '../stores/salesStore'
 import { CATEGORIES } from '../types/sales'
-import { buildLineChartData } from '../utils/buildChartData'
+import {
+  buildBarChartData,
+  buildLineChartData,
+  buildPieChartData,
+} from '../utils/buildChartData'
 
 export function useChartData() {
   const store = useSalesStore()
@@ -29,7 +33,23 @@ export function useChartData() {
     ),
   )
 
+  const barChartData = computed(() =>
+    buildBarChartData(
+      filteredRecords.value,
+      activeMonths.value,
+      visibleCategories.value,
+      highlightedMonth.value,
+    ),
+  )
+
+  const pieChartData = computed(() =>
+    buildPieChartData(filteredRecords.value, visibleCategories.value),
+  )
+
   return {
     lineChartData,
+    barChartData,
+    pieChartData,
+    activeMonths,
   }
 }

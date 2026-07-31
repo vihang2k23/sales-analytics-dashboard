@@ -31,7 +31,10 @@ const options: ChartOptions<'doughnut'> = {
 
 <template>
   <ChartPanel title="Revenue share">
-    <div class="relative h-72 w-full" aria-label="Revenue share pie chart">
+    <div
+      class="relative mx-auto h-64 w-full max-w-md sm:h-72"
+      aria-label="Revenue share pie chart"
+    >
       <Doughnut :data="pieChartData" :options="options" />
     </div>
   </ChartPanel>

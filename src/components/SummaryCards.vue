@@ -10,13 +10,11 @@ import SummaryCard from './SummaryCard.vue'
 
 const store = useSalesStore()
 const { summaryStats } = storeToRefs(store)
-
-// formatting stays here; numbers come from the store
 </script>
 
 <template>
   <section
-    class="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-3"
+    class="mb-4 grid grid-cols-1 gap-3 sm:mb-6 sm:grid-cols-3 sm:gap-4"
     aria-label="Summary statistics"
   >
     <SummaryCard

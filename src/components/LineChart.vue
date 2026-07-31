@@ -44,7 +44,10 @@ const options: ChartOptions<'line'> = {
 
 <template>
   <ChartPanel title="Revenue trend">
-    <div class="relative h-72 w-full" aria-label="Revenue trend line chart">
+    <div
+      class="relative h-64 w-full sm:h-72"
+      aria-label="Revenue trend line chart"
+    >
       <Line :data="lineChartData" :options="options" />
     </div>
   </ChartPanel>

@@ -57,9 +57,14 @@ const options = computed<ChartOptions<'bar'>>(() => ({
 </script>
 
 <template>
-  <ChartPanel title="Monthly revenue by category">
-    <p class="m-0 mb-2 text-xs text-muted">Click a bar to highlight that month</p>
-    <div class="relative h-72 w-full" aria-label="Monthly revenue bar chart">
+  <ChartPanel
+    title="Monthly revenue by category"
+    hint="Click a bar to highlight"
+  >
+    <div
+      class="relative h-64 w-full sm:h-72"
+      aria-label="Monthly revenue bar chart"
+    >
       <Bar :data="barChartData" :options="options" />
     </div>
   </ChartPanel>

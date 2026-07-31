@@ -40,7 +40,14 @@ export const useSalesStore = defineStore('sales', () => {
   }
 
   function setCustomRange(start: MonthKey, end: MonthKey): void {
-    customRange.value = { start, end }
+    const startIndex = MONTHS.indexOf(start)
+    const endIndex = MONTHS.indexOf(end)
+
+    customRange.value =
+      startIndex <= endIndex
+        ? { start, end }
+        : { start: end, end: start }
+
     datePreset.value = 'custom'
     highlightedMonth.value = null
   }

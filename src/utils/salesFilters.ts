@@ -28,12 +28,15 @@ export function getMonthsInRange(start: MonthKey, end: MonthKey): MonthKey[] {
   const startIndex = MONTHS.indexOf(start)
   const endIndex = MONTHS.indexOf(end)
 
-  // start after end? just return empty
-  if (startIndex < 0 || endIndex < 0 || startIndex > endIndex) {
+  if (startIndex < 0 || endIndex < 0) {
     return []
   }
 
-  return MONTHS.slice(startIndex, endIndex + 1)
+  // if they pick From after To, still use the span between them
+  const from = Math.min(startIndex, endIndex)
+  const to = Math.max(startIndex, endIndex)
+
+  return MONTHS.slice(from, to + 1)
 }
 
 export function filterSalesRecords(

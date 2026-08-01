@@ -2,6 +2,7 @@
 import { storeToRefs } from 'pinia'
 import { useSalesStore } from '../stores/salesStore'
 import { CATEGORIES, type Category } from '../types/sales'
+import { UI_TEXT } from '../constants/uiText'
 import CategoryChip from './CategoryChip.vue'
 
 const store = useSalesStore()
@@ -16,7 +17,9 @@ function isSelected(category: Category): boolean {
 
 <template>
   <div>
-    <p class="m-0 mb-2 text-sm font-medium text-ink">Categories</p>
+    <p class="m-0 mb-2 text-sm font-medium text-ink">
+      {{ UI_TEXT.categoriesHeading }}
+    </p>
     <div class="flex flex-wrap gap-2">
       <CategoryChip
         v-for="category in CATEGORIES"

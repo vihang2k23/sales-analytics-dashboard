@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
 import { useSalesStore } from '../stores/salesStore'
+import { UI_TEXT } from '../constants/uiText'
 
 const store = useSalesStore()
 const { highlightedMonth } = storeToRefs(store)
@@ -13,16 +14,16 @@ const { highlightedMonth } = storeToRefs(store)
     class="mb-4 flex flex-wrap items-center justify-between gap-2 rounded-lg border border-accent/30 bg-accent-soft px-3 py-2 text-sm"
   >
     <p class="m-0 text-ink">
-      Highlighting
+      {{ UI_TEXT.highlightPrefix }}
       <span class="font-semibold">{{ highlightedMonth }}</span>
-      on the line and bar charts
+      {{ UI_TEXT.highlightSuffix }}
     </p>
     <button
       type="button"
       class="rounded-md border border-accent/40 bg-surface px-2.5 py-1 text-accent"
       @click="store.clearHighlight()"
     >
-      Clear
+      {{ UI_TEXT.clearHighlight }}
     </button>
   </div>
 </template>

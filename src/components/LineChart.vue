@@ -3,6 +3,7 @@ import { Line } from 'vue-chartjs'
 import type { ChartOptions } from 'chart.js'
 import { useChartData } from '../composables/useChartData'
 import { registerCharts } from '../utils/registerCharts'
+import { UI_TEXT } from '../constants/uiText'
 import ChartPanel from './ChartPanel.vue'
 
 registerCharts()
@@ -43,7 +44,7 @@ const options: ChartOptions<'line'> = {
 </script>
 
 <template>
-  <ChartPanel title="Revenue trend">
+  <ChartPanel :title="UI_TEXT.lineChartTitle">
     <div
       class="relative h-64 w-full sm:h-72"
       aria-label="Revenue trend line chart"

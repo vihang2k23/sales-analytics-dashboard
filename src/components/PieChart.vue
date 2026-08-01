@@ -3,6 +3,7 @@ import { Doughnut } from 'vue-chartjs'
 import type { ChartOptions } from 'chart.js'
 import { useChartData } from '../composables/useChartData'
 import { registerCharts } from '../utils/registerCharts'
+import { UI_TEXT } from '../constants/uiText'
 import ChartPanel from './ChartPanel.vue'
 
 registerCharts()
@@ -30,7 +31,7 @@ const options: ChartOptions<'doughnut'> = {
 </script>
 
 <template>
-  <ChartPanel title="Revenue share">
+  <ChartPanel :title="UI_TEXT.pieChartTitle">
     <div
       class="relative mx-auto h-64 w-full max-w-md sm:h-72"
       aria-label="Revenue share pie chart"

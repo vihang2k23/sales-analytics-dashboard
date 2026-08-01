@@ -6,6 +6,7 @@ import { useSalesStore } from '../stores/salesStore'
 import { useChartData } from '../composables/useChartData'
 import { registerCharts } from '../utils/registerCharts'
 import type { MonthKey } from '../types/sales'
+import { UI_TEXT } from '../constants/uiText'
 import ChartPanel from './ChartPanel.vue'
 
 registerCharts()
@@ -58,8 +59,8 @@ const options = computed<ChartOptions<'bar'>>(() => ({
 
 <template>
   <ChartPanel
-    title="Monthly revenue by category"
-    hint="Click a bar to highlight"
+    :title="UI_TEXT.barChartTitle"
+    :hint="UI_TEXT.barChartHint"
   >
     <div
       class="relative h-64 w-full sm:h-72"

@@ -3,6 +3,7 @@
 Vue 3 dashboard for monthly sales by product category — filters, summary cards, and Chart.js charts.
 
 - **Repo:** https://github.com/vihang2k23/sales-analytics-dashboard
+- **Live:** https://sales-analytics-demo.netlify.app/
 
 ## Stack
 
@@ -119,12 +120,9 @@ I stopped at a working, readable dashboard rather than polishing UI forever — 
 3. Build settings (also in `netlify.toml`):
    - **Build command:** `npm run build`
    - **Publish directory:** `dist`
-4. Deploy, then put the live URL at the top of this README next to the repo link.
+4. Deploy completes automatically from `main` after each push.
 
-```bash
-npm run build
-# or: netlify deploy --prod
-```
+Live site: https://sales-analytics-demo.netlify.app/
 
 ## License
 

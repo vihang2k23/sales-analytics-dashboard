@@ -38,9 +38,10 @@ export const UI_TEXT = {
   barChartTitle: 'Monthly revenue by category',
   barChartHint: 'Click a bar to highlight',
   pieChartTitle: 'Revenue share',
+  pieHighlightHint: 'Month focus:',
 
   highlightPrefix: 'Highlighting',
-  highlightSuffix: 'on the line and bar charts',
+  highlightSuffix: 'across all charts',
   clearHighlight: 'Clear',
 
   emptyTitle: 'Nothing to show',

@@ -33,7 +33,7 @@ npm run preview  # serve the dist folder locally
 - Filters: All year / Q1–Q4 / custom month range + category toggles
 - Summary cards: total revenue, units sold, return rate
 - Charts: line (trend), grouped bar (monthly), doughnut (share)
-- Click a bar to highlight that month on the line + bar charts
+- Click a bar to highlight that month across line, bar, and pie charts
 
 ## Folder structure
 

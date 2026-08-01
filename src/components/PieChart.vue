@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { Doughnut } from 'vue-chartjs'
 import type { ChartOptions } from 'chart.js'
 import { useChartData } from '../composables/useChartData'
@@ -8,7 +9,13 @@ import ChartPanel from './ChartPanel.vue'
 
 registerCharts()
 
-const { pieChartData } = useChartData()
+const { pieChartData, highlightedMonth } = useChartData()
+
+const pieHint = computed(() =>
+  highlightedMonth.value
+    ? `${UI_TEXT.pieHighlightHint} ${highlightedMonth.value}`
+    : undefined,
+)
 
 const options: ChartOptions<'doughnut'> = {
   responsive: true,
@@ -31,7 +38,7 @@ const options: ChartOptions<'doughnut'> = {
 </script>
 
 <template>
-  <ChartPanel :title="UI_TEXT.pieChartTitle">
+  <ChartPanel :title="UI_TEXT.pieChartTitle" :hint="pieHint">
     <div
       class="relative mx-auto h-64 w-full max-w-md sm:h-72"
       aria-label="Revenue share pie chart"

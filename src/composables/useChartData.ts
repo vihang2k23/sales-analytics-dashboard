@@ -43,7 +43,11 @@ export function useChartData() {
   )
 
   const pieChartData = computed(() =>
-    buildPieChartData(filteredRecords.value, visibleCategories.value),
+    buildPieChartData(
+      filteredRecords.value,
+      visibleCategories.value,
+      highlightedMonth.value,
+    ),
   )
 
   return {
@@ -51,5 +55,6 @@ export function useChartData() {
     barChartData,
     pieChartData,
     activeMonths,
+    highlightedMonth,
   }
 }

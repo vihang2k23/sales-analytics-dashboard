@@ -89,17 +89,28 @@ export function buildBarChartData(
 export function buildPieChartData(
   records: SalesRecord[],
   categories: Category[],
+  highlightedMonth: MonthKey | null,
 ): ChartData<'doughnut'> {
+  // when a month is picked, pie shows that month's share only
+  const scopedRecords = highlightedMonth
+    ? records.filter((row) => row.month === highlightedMonth)
+    : records
+
   return {
     labels: [...categories],
     datasets: [
       {
-        data: categories.map((category) => categoryTotal(records, category)),
+        data: categories.map((category) =>
+          categoryTotal(scopedRecords, category),
+        ),
         backgroundColor: categories.map(
           (category) => CATEGORY_COLORS[category],
         ),
-        borderWidth: 1,
+        borderWidth: highlightedMonth ? 2 : 1,
         borderColor: '#ffffff',
+        offset: highlightedMonth
+          ? categories.map(() => 4)
+          : categories.map(() => 0),
       },
     ],
   }

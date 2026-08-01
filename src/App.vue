@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import AppLayout from './layouts/AppLayout.vue'
 import DashboardView from './views/DashboardView.vue'
 </script>
 
 <template>
-  <DashboardView />
+  <AppLayout>
+    <DashboardView />
+  </AppLayout>
 </template>

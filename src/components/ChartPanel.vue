@@ -11,10 +11,17 @@ withDefaults(
 </script>
 
 <template>
-  <div class="rounded-lg border border-line bg-surface p-3 shadow-sm sm:p-4">
-    <div class="mb-3 flex flex-wrap items-baseline justify-between gap-2">
-      <h2 class="m-0 text-sm font-medium text-ink">{{ title }}</h2>
-      <p v-if="hint" class="m-0 text-xs text-muted">{{ hint }}</p>
+  <div
+    class="rounded-2xl border border-line bg-surface p-4 shadow-sm sm:p-5"
+  >
+    <div class="mb-4 flex flex-wrap items-center justify-between gap-2 border-b border-line pb-3">
+      <h2 class="font-display m-0 text-sm font-semibold text-ink">{{ title }}</h2>
+      <p
+        v-if="hint"
+        class="m-0 rounded-full bg-accent-soft px-2.5 py-1 text-xs font-medium text-accent"
+      >
+        {{ hint }}
+      </p>
     </div>
     <slot />
   </div>

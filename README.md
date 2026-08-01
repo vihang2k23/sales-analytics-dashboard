@@ -39,6 +39,7 @@ npm run preview  # serve the dist folder locally
 ```
 src/
   components/     UI pieces (filters, cards, charts)
+  layouts/        AppNavbar, AppFooter, AppLayout
   composables/    useChartData — store → chart datasets
   constants/      UI_TEXT — labels / titles in one file
   data/           salesData.json
@@ -89,7 +90,13 @@ I used **Cursor** while building this. Below is what I actually asked for and wh
 - **What I got:** Working builders and vue-chartjs components. Early draft put too much in one place.
 - **Why / what I changed:** Pure builders live in `utils/buildChartData.ts`; the composable only wires the store. Shared `CATEGORY_COLORS` so line/bar/pie don’t drift. Highlight fades non-selected bars and bumps line points. Empty filters show an empty state instead of a broken chart.
 
-### 5. README / structure notes
+### 5. Navbar logo
+
+- **What I asked:** Generate a simple sales-analytics chart icon for the navbar.
+- **What I got:** A flat blue bar-chart + trend-arrow icon PNG.
+- **Why / what I changed:** Kept the icon only (no baked-in text). Navbar shows the icon next to “Sales Analytics” so it stays readable at small sizes.
+
+### 6. README / structure notes
 
 - **What I asked:** Help draft the README sections the brief asks for.
 - **What I got:** Outline with setup, structure, AI section, trade-offs.
@@ -105,13 +112,18 @@ I used **Cursor** while building this. Below is what I actually asked for and wh
 
 I stopped at a working, readable dashboard rather than polishing UI forever — that matched the brief.
 
-## Deploy
+## Deploy (Netlify)
 
-For submission, host the `dist` build on Vercel or Netlify and put the live URL at the top of this README next to the repo link.
+1. Push this repo to GitHub.
+2. In Netlify: **Add new site → Import an existing project** → pick the repo.
+3. Build settings (also in `netlify.toml`):
+   - **Build command:** `npm run build`
+   - **Publish directory:** `dist`
+4. Deploy, then put the live URL at the top of this README next to the repo link.
 
 ```bash
 npm run build
-# then connect this GitHub repo to Vercel (Framework: Vite) and deploy
+# or: netlify deploy --prod
 ```
 
 ## License

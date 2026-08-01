@@ -11,10 +11,12 @@ defineEmits<{
 </script>
 
 <template>
-  <label class="flex min-w-[8rem] flex-col gap-1 text-sm">
-    <span class="font-medium text-ink">{{ label }}</span>
+  <label class="flex min-w-[8.5rem] flex-col gap-1.5 text-sm">
+    <span class="text-xs font-semibold uppercase tracking-wide text-muted">
+      {{ label }}
+    </span>
     <select
-      class="rounded-md border border-line bg-white px-3 py-2 text-ink outline-none focus:border-accent"
+      class="rounded-xl border border-line bg-page px-3 py-2.5 text-ink outline-none transition focus:border-accent focus:bg-surface"
       :value="modelValue"
       @change="
         $emit('update:modelValue', ($event.target as HTMLSelectElement).value)

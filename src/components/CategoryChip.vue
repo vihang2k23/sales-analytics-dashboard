@@ -12,11 +12,11 @@ defineEmits<{
 <template>
   <button
     type="button"
-    class="rounded-md border px-3 py-1.5 text-sm transition-colors"
+    class="rounded-full border px-3.5 py-1.5 text-sm font-medium transition"
     :class="
       selected
-        ? 'border-accent bg-accent-soft text-accent'
-        : 'border-line bg-white text-muted'
+        ? 'border-accent bg-accent text-white shadow-sm shadow-accent/20'
+        : 'border-line bg-page text-muted hover:border-accent/40 hover:text-ink'
     "
     @click="$emit('toggle')"
   >

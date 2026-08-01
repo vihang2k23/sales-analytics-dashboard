@@ -27,10 +27,12 @@ function onEndChange(value: string): void {
 
 <template>
   <div class="flex flex-col gap-4 md:flex-row md:flex-wrap md:items-end">
-    <label class="flex min-w-[10rem] flex-col gap-1 text-sm">
-      <span class="font-medium text-ink">{{ UI_TEXT.dateRangeLabel }}</span>
+    <label class="flex min-w-[10rem] flex-col gap-1.5 text-sm">
+      <span class="text-xs font-semibold uppercase tracking-wide text-muted">
+        {{ UI_TEXT.dateRangeLabel }}
+      </span>
       <select
-        class="rounded-md border border-line bg-white px-3 py-2 text-ink outline-none focus:border-accent"
+        class="rounded-xl border border-line bg-page px-3 py-2.5 text-ink outline-none transition focus:border-accent focus:bg-surface"
         :value="datePreset"
         @change="onPresetChange(($event.target as HTMLSelectElement).value)"
       >

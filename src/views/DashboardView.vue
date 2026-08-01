@@ -16,6 +16,7 @@ const { hasFilteredData } = storeToRefs(store)
 <template>
   <div class="mx-auto max-w-6xl px-4 py-6 sm:py-8 md:px-6 lg:py-10">
     <DashboardHeader
+      
       :title="UI_TEXT.appTitle"
       :subtitle="UI_TEXT.appSubtitle"
     />
